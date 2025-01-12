@@ -11,3 +11,4 @@ lcd.hal_write_command(0x0F)
 #Creates Blinking Cursor On Screen
  
 lcd.putstr('Greetings From Another Realm')
+#put message on screen 
