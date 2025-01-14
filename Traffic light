@@ -1,0 +1,29 @@
+import machine
+import time
+
+x = machine.Pin(1, machine.Pin.OUT)  # Red LED
+y = machine.Pin(2, machine.Pin.OUT)  # Yellow LED
+z = machine.Pin(3, machine.Pin.OUT)  # Green LED
+
+def stop_light():
+    while True:
+        # Red light
+        x.value(1)
+        y.value(0)
+        z.value(0)
+        time.sleep(5)  
+        
+        # Green light 
+        x.value(0)
+        y.value(0)
+        z.value(1)
+        time.sleep(5) 
+        
+        # Yellow light
+        x.value(0)
+        y.value(1)
+        z.value(0)
+        time.sleep(2) 
+
+try:
+  stop_light()
